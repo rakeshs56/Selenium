@@ -37,6 +37,7 @@ import com.aventstack.extentreports.reporter.configuration.ViewName;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
+	//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
     public static WebDriver driver;
     public static ExtentReports extent;
     protected ExtentTest test;
