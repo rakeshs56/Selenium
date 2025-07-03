@@ -1,4 +1,4 @@
-package generic;
+package com.generic;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
-
-import com.generic.Filelibe;
 import com.generic.Log;
 
 
