@@ -1,4 +1,7 @@
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -17,14 +20,14 @@ public class NewTest {
   @BeforeSuite
   public void beforesuite() {
 	  System.out.println("beforesuite");
-	  String driver= System.setProperty("webdriver.chrome.driver", "C:\\Users\\SKP\\Documents\\workspace\\NewProject\\drivers\\chromedriver.exe");
+	  
   }
  
   @BeforeClass
   public void beforeClass() {
 	  System.out.println("beforesuite");
-	  WebDriver driver = new ChromeDriver();
-	  driver.get("https://google.com");
+	  WebDriverManager.chromedriver().setup();
+	  driver=new ChromeDriver();
   }
   
   @BeforeTest
