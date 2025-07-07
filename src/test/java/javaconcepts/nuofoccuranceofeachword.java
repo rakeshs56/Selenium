@@ -1,6 +1,7 @@
 package javaconcepts;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 
 public class nuofoccuranceofeachword {
 
@@ -20,4 +21,17 @@ public class nuofoccuranceofeachword {
 		}
 		System.out.println(str+" "+count);
 	}
-	}} 
+		LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("Apple");
+        linkedList.add("Banana");
+        linkedList.add("Cherry");
+        linkedList.add("Apple"); // Duplicate element
+
+        // Convert LinkedList to HashSet
+        HashSet<String> hashSet = new HashSet<>(linkedList);
+
+        // Print the HashSet
+        System.out.println("HashSet: " + hashSet);
+    }
+  }
+

@@ -10,7 +10,7 @@ public class java1 {
 		Scanner s=new Scanner(System.in);
 		System.out.println("st number");
 		int a=s.nextInt();
-		
+ 
 		if(a==1) {
 			System.out.println("2 is smallest prime number");
 		}
@@ -23,8 +23,6 @@ public class java1 {
 		}
 		if(a==i) {
 			System.out.println(a+" is prime number");
-		}
-		
+		}	
 	}
-
 }

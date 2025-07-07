@@ -27,12 +27,23 @@ public class dropdownselection {
 	  System.out.println(driver.getTitle());
 	  WebElement drop = driver.findElement(By.id("oldSelectMenu"));
 	  Select select=new Select(drop);
-	  select.selectByIndex(4);
+	  //select.selectByIndex(4);
 	  Thread.sleep(10000);
 	  System.out.println(drop.getText());
+	  drop.click();
+	  List<WebElement> allOptions= driver.findElements(By.id("oldSelectMenu"));
+	  String option="Blue";
+	  for(WebElement el:allOptions) {
+
+          if(el.getText().contains(option)) {
+
+                el.click();
+el.isSelected();
+          }
+
+}
 	  
-	  
-	  
+	  Thread.sleep(10000);
 	  driver.quit();
   }
 }

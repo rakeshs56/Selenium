@@ -6,6 +6,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,7 +16,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class crossbrowsertest {
  WebDriver driver;
@@ -39,6 +41,8 @@ public class crossbrowsertest {
   
   @Test
   public void first() {
+	// Implicitly wait for 10 seconds
+	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	 driver.get("http://www.citi.com"); 
 	 String act=driver.getTitle();
 	 String ect="citi";

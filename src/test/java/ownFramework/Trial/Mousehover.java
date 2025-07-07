@@ -1,6 +1,7 @@
 package ownFramework.Trial;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,6 +35,7 @@ public class Mousehover {
 	 WebElement ele3 = driver.findElement(By.xpath("//span[text()='Automate']"));
 	 action.moveToElement(ele1).moveToElement(ele2).moveToElement(ele3).perform();
 	 ele3.click();
+	 action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
 	 System.out.println(driver.getTitle());
 	 driver.navigate().back();
 	 Thread.sleep(10000);
